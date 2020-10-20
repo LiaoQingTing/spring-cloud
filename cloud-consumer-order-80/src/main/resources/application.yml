@@ -3,3 +3,6 @@ server:
 spring:
   application:
     name: cloud-consumer-order
+  devtools:
+    livereload:
+      port: 35729

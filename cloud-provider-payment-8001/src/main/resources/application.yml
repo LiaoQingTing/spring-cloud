@@ -11,3 +11,6 @@ spring:
     hikari:
       max-lifetime: 5000000
     driver-class-name: com.mysql.cj.jdbc.Driver
+  devtools:
+    livereload:
+      port: 35730
