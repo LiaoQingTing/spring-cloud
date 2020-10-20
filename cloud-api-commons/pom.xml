@@ -11,7 +11,7 @@
 
     <groupId>com.liaoqingting</groupId>
     <artifactId>cloud-api-commons</artifactId>
-
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

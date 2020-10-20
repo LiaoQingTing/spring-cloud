@@ -22,4 +22,8 @@ public class APIController {
     public CommonResult<Integer> putUser(@RequestBody User user){
         return new CommonResult<>(200,"success",userService.insertUser(user));
     }
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
+    }
 }
