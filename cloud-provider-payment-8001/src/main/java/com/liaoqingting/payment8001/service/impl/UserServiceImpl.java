@@ -1,7 +1,7 @@
-package com.liaoqingting.payment.service.impl;
+package com.liaoqingting.payment8001.service.impl;
 
-import com.liaoqingting.payment.mapper.UserMapper;
-import com.liaoqingting.payment.service.UserService;
+import com.liaoqingting.payment8001.mapper.UserMapper;
+import com.liaoqingting.payment8001.service.UserService;
 import com.liaoqingting.springcloud.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

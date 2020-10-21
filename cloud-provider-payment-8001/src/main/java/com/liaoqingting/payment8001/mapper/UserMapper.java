@@ -1,4 +1,4 @@
-package com.liaoqingting.payment.mapper;
+package com.liaoqingting.payment8001.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.liaoqingting.springcloud.model.User;

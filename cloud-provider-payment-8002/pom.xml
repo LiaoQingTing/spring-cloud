@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.liaoqingting</groupId>
-    <artifactId>cloud-provider-payment-8001</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>cloud-provider-payment-8002</artifactId>
 
     <dependencies>
         <dependency>
@@ -61,24 +59,4 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.liaoqingting.payment8001.PaymentApplication8001</mainClass>
-                    <layout>JAR</layout>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>

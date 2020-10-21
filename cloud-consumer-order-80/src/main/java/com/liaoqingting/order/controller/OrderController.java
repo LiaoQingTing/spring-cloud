@@ -18,16 +18,17 @@ import org.springframework.web.client.RestTemplate;
 @Log4j2
 @RestController
 public class OrderController {
-
     @Autowired
     private RestTemplate restTemplate;
 
+    private static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+
     @GetMapping("/consumer/user/get/{id}")
     public CommonResult<User> getUserById(@PathVariable("id")int id){
-        return restTemplate.getForObject("http://localhost:8001/api/user/get/"+id,CommonResult.class);
+        return restTemplate.getForObject(PAYMENT_URL+"/api/user/get/"+id,CommonResult.class);
     }
     @GetMapping("/consumer/user/put")
     public CommonResult<String> putUser(User user){
-        return restTemplate.postForObject("http://localhost:8001/api/user/put",user,CommonResult.class);
+        return restTemplate.postForObject(PAYMENT_URL+"/api/user/put",user,CommonResult.class);
     }
 }

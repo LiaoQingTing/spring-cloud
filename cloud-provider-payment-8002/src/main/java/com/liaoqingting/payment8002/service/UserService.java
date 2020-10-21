@@ -1,4 +1,4 @@
-package com.liaoqingting.payment.service;
+package com.liaoqingting.payment8002.service;
 
 import com.liaoqingting.springcloud.model.User;
 

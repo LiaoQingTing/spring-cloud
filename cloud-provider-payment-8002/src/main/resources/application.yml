@@ -1,12 +1,20 @@
 server:
-  port: 80
+  port: 8002
 
 spring:
   application:
-    name: cloud-consumer-order
+    name: cloud-payment-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&autoReconnect=true&failOverReadOnly=false&characterEncoding=utf-8
+    username: root
+    password: 123456
+    platform: mysql
+    hikari:
+      max-lifetime: 5000000
+    driver-class-name: com.mysql.cj.jdbc.Driver
   devtools:
     livereload:
-      port: 35729
+      port: 35735
 
 eureka:
   client:
@@ -21,7 +29,7 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
   instance:
     # 实例名
-    instance-id: consumer-order
+    instance-id: payment8002
     # 访问路径显示ip
     prefer-ip-address: true
     # eureka客户端向服务端发送心跳的时间间隔，单位：秒 （默认30秒）
