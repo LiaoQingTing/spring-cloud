@@ -1,5 +1,6 @@
 server:
   port: 8001
+
 spring:
   application:
     name: cloud-payment-service
@@ -14,3 +15,12 @@ spring:
   devtools:
     livereload:
       port: 35730
+
+eureka:
+  client:
+    # 表示自己注册金eureka server
+    register-with-eureka: true
+    # 是否从eureka server抓取已有的注册信息，单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
