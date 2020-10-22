@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Log4j2
 @RestController
@@ -27,7 +28,11 @@ public class APIController {
     @GetMapping("/user/get/{id}")
     public CommonResult<User> getUserById(@PathVariable("id")Integer id){
         log.info("查询成功 端口号："+serverPort);
-
+//        try{
+//            TimeUnit.SECONDS.sleep(3);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return new CommonResult<>(200,  "success:"+serverPort, userService.getUserById(id));
     }
     @PostMapping("/user/put")
