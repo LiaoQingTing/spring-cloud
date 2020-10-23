@@ -22,4 +22,4 @@ eureka:
     # 关闭eureka自我保护机制，立马将不可用服务剔除
     enable-self-preservation: false
     # 60秒剔除
-    eviction-interval-timer-in-ms: 60000
+    eviction-interval-timer-in-ms: 90000
