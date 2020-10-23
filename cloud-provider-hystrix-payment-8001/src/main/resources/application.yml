@@ -36,3 +36,7 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     # eureka服务端在收到最后一次心跳后等待的时间上限，单位：秒 （默认90秒），超时将剔除服务
     lease-expiration-duration-in-seconds: 60
+
+feign:
+  hystrix:
+    enabled: true
